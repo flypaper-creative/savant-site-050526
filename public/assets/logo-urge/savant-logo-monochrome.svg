@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">savant monochrome glyph</title>
+  <desc id="desc">Monochrome savant glyph.</desc>
+  <path fill="currentColor" d="M256 48 400 120v116L272 300v20h60l76 76-76 68H180l-76-68 76-76h60v-20L112 236V120L256 48Zm0 31.3L140 137.3v81.4l116 58 116-58v-81.4L256 79.3ZM155.8 146 256 196.1 356.2 146 256 95.9 155.8 146Zm0 72L256 267.1 356.2 218 256 167.9 155.8 218ZM192 348l-48 48 48 40h128l48-40-48-48H192Zm22.6 28L256 417.4 297.4 376h-82.8Z"/>
+</svg>
