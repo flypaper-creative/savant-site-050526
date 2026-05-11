@@ -17,7 +17,9 @@ export default function App() {
   };
 
   return (
-    <main className="relative w-full h-screen bg-[#050505]">
+    <main className="relative w-full h-screen bg-[#050505] font-sans selection:bg-[#ffaa00]/30">
+      <div className="noise-overlay" />
+      
       {/* 3D Experience (contains both preloader and persistent logo) */}
       <SavantPreloader onComplete={handlePreloadComplete} />
 
@@ -35,10 +37,43 @@ export default function App() {
               <div className="w-12 h-12" id="logo-anchor">
                 {/* The 3D logo is positioned relative to this in world space */}
               </div>
-              <nav className="flex gap-8 cinematic-text text-[10px] tracking-[0.3em] text-white/60 pointer-events-auto">
-                <a href="#" className="hover:text-white transition-colors">Intelligence</a>
-                <a href="#" className="hover:text-white transition-colors">Systems</a>
-                <a href="#" className="hover:text-white transition-colors">Network</a>
+              <nav className="flex gap-12 cinematic-text text-[10px] tracking-[0.4em] text-white/50 pointer-events-auto">
+                <motion.a 
+                  href="#" 
+                  className="relative group py-2"
+                  whileHover={{ color: "#ffffff" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="relative z-10 transition-colors duration-300 group-hover:text-white">Intelligence</span>
+                  <motion.span 
+                    className="absolute bottom-0 left-0 h-[1px] bg-[#ffaa00] w-0 group-hover:w-full transition-all duration-500 ease-out" 
+                    layoutId="nav-underline"
+                  />
+                </motion.a>
+                <motion.a 
+                  href="#" 
+                  className="relative group py-2"
+                  whileHover={{ color: "#ffffff" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="relative z-10 transition-colors duration-300 group-hover:text-white">Systems</span>
+                  <motion.span 
+                    className="absolute bottom-0 left-0 h-[1px] bg-[#ffaa00] w-0 group-hover:w-full transition-all duration-500 ease-out" 
+                    layoutId="nav-underline-systems"
+                  />
+                </motion.a>
+                <motion.a 
+                  href="#" 
+                  className="relative group py-2"
+                  whileHover={{ color: "#ffffff" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="relative z-10 transition-colors duration-300 group-hover:text-white">Network</span>
+                  <motion.span 
+                    className="absolute bottom-0 left-0 h-[1px] bg-[#ffaa00] w-0 group-hover:w-full transition-all duration-500 ease-out" 
+                    layoutId="nav-underline-network"
+                  />
+                </motion.a>
               </nav>
             </header>
 
