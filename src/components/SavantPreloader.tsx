@@ -13,7 +13,16 @@ export default function SavantPreloader({ onComplete }: { onComplete: () => void
         gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping }}
         camera={{ fov: 45, far: 4000 }}
       >
-        <Suspense fallback={null}>
+        <Suspense fallback={
+          <Html center>
+            <div className="flex flex-col items-center">
+              <div className="w-10 h-10 border-t border-savant-gold rounded-full animate-spin mb-4" />
+              <div className="text-[8px] font-mono tracking-[0.5em] text-savant-gold uppercase opacity-40">
+                Syncing Neural Core
+              </div>
+            </div>
+          </Html>
+        }>
           <Scene onComplete={onComplete} />
         </Suspense>
       </Canvas>
